@@ -50,6 +50,12 @@ public class EVERALDO_ZACARÍAS_EDWAR_201503986 {
     
     @Before
     public void setUp() {
+        AHorario = new AsignarHorario();
+        
+        EstudianteValido = mock(Estudiante.class);
+        EstudianteInvalido = mock(Estudiante.class);
+        when(EstudianteValido.getCarrera()).thenReturn(Carrera1);
+        when(EstudianteInvalido.getCarrera()).thenReturn(Carrera1);
     }
     
     @After
