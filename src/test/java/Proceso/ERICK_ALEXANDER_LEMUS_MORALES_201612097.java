@@ -44,7 +44,7 @@ public class ERICK_ALEXANDER_LEMUS_MORALES_201612097 {
         estudiante = Mockito.mock(Estudiante.class);
         carrera = Mockito.mock(Carrera.class);
         ra = Mockito.mock(RegistroAcademico.class);
-        when(ra.getAño()).thenReturn(2020);
+        when(ra.getAnio()).thenReturn(2020);
         when(ra.cheequearCarnet()).thenReturn(true);
         when(carrera.getCodigo()).thenReturn(5);
         when(carrera.procesarCarrera()).thenReturn(4);
