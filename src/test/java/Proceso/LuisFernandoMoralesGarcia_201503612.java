@@ -16,6 +16,24 @@ import static org.mockito.Mockito.when;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 
-public class PlantillaParaTestNoEditar {
-//Luis Fernando Morales Garcia 201503612
+public class LuisFernandoMoralesGarcia_201503612 {
+
+  @Test
+    public void p1(){
+        AsignarHorario AH=new AsignarHorario();
+        Carrera ca= new Carrera(2, 'Sistemas');
+        RegistroAcademico RA= new RegistroAcademico(2010, '03612');
+        
+        assertEquals(AH.generarHorario(ca, RA), 210);
+    }
+    
+     @Test
+    public void p1(){
+        AsignarHorario AH=new AsignarHorario();
+        Carrera ca= new Carrera(4, 'Civil');
+        RegistroAcademico RA= new RegistroAcademico(2014, '03612');
+        
+        assertEquals(AH.generarHorario(ca, RA), 2414);
+    }
+
 }
