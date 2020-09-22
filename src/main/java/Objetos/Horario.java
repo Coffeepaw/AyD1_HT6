@@ -8,10 +8,12 @@ package Objetos;
 public class Horario {
     private int codigoHorario;
     private String descripcion;
+    private Boolean traslape;
 
     public Horario(int codigoHorario, String descripcion) {
         this.codigoHorario = codigoHorario;
         this.descripcion = descripcion;
+        this.traslape = false;
     }
 
     public Horario() {
@@ -35,6 +37,9 @@ public class Horario {
         this.descripcion = descripcion;
     }
     
+    public void setTraslape( Boolean ptraslape) {
+        this.traslape = ptraslape;
+    }
     
     
 }
