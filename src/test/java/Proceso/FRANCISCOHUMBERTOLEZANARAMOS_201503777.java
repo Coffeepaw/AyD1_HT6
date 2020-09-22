@@ -1,7 +1,7 @@
 /*
 *   FRANCISCO HUMBERTO LEZANA RAMOS - 201503777
 *   HOJA DE TRABAJO #6
-*   ANALISIS Y DISEÑO DE SISTEMAS 1
+*   ANALISIS Y DISEÃ‘O DE SISTEMAS 1
  */
 package Proceso;
 
@@ -34,7 +34,7 @@ public class FRANCISCOHUMBERTOLEZANARAMOS_201503777 {
     
     //TEST NO 2 - DEBE RETORNAR 0 YA QUE NO EXISTE CARRERA PARA RANGO DEFINIDO
     @Test
-    public void TestCarnetRegistrado(){
+    public void TestProcesarCarrera(){
     	carrera = new Carrera(88, "TEST CARRERA");
         int checkNumber = carrera.procesarCarrera();
         assertEquals(0, checkNumber);
