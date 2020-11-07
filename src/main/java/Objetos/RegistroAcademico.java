@@ -1,20 +1,20 @@
 package Objetos;
 
 public class RegistroAcademico {
-    private int año;
+    private int anio;
     private String correlativo;
     
-    public RegistroAcademico(int año, String correlativo){
-        this.año = año;
+    public RegistroAcademico(int anio, String correlativo){
+        this.anio = anio;
         this.correlativo = correlativo;
     }
 
-    public int getAño() {
-        return año;
+    public int getAnio() {
+        return anio;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setAnio(int anio) {
+        this.anio = anio;
     }
 
     public String getCorrelativo() {
@@ -26,15 +26,15 @@ public class RegistroAcademico {
     }
     
     public boolean cheequearCarnet(){
-        String carnet = this.año+this.correlativo;
-        boolean chequeoTamaño = carnet.length() == 9 && String.valueOf(this.año).length()==4;
-        if(chequeoTamaño){
+        String carnet = this.anio+this.correlativo;
+        boolean chequeoTamanio = carnet.length() == 9 && String.valueOf(this.anio).length()==4;
+        if(chequeoTamanio){
             try{
                 int chequeoCorrelativo = Integer.parseInt(this.correlativo);
-                if(año > 1900){
+                if(anio > 1900){
                     return true;
                 }else{
-                    throw new Exception("Año no valido.");
+                    throw new Exception("Anio no valido.");
                 }
             }catch(Exception e){
                 return false;

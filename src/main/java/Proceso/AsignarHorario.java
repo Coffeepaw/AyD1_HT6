@@ -23,7 +23,7 @@ public class AsignarHorario {
         Horario horario = new Horario();
 
         if (carnet.cheequearCarnet()) {
-            switch (carrera.procesarCarrera() + Integer.parseInt(String.valueOf(carnet.getAño()).substring(3, 4))) {
+            switch (carrera.procesarCarrera() + Integer.parseInt(String.valueOf(carnet.getAnio()).substring(3, 4))) {
                 case 1:
                     horario.setCodigoHorario(210);
                     break;

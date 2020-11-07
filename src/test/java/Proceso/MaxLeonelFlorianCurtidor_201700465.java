@@ -16,6 +16,27 @@ import static org.mockito.Mockito.when;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 
-public class AsignarHorarioTest {
+public class MaxLeonelFlorianCurtidor_201700465() {
+
+    
+    Horario horario = new Horario();
+    AsignarHorario asignacion = new AsignarHorario();
+    
+
+    public MaxLeonelFlorianCurtidor_201700465(){
+
+    }
+
+    @Test
+    public void AsignacionVacia() {
+        assertNotNull(asignacion);
+    }
+
+    @Test
+    public void HorarioVacio() {
+        assertNotNull(horario);
+    }
+
+
 
 }
