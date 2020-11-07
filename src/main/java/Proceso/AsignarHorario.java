@@ -12,9 +12,19 @@ import Objetos.RegistroAcademico;
 import java.util.ArrayList;
 import java.util.List;
 
+//importaciones de testing
+import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import org.mockito.Mockito;
+
 public class AsignarHorario {
 
     public AsignarHorario() {
+        
     }
     
     
@@ -85,4 +95,78 @@ public class AsignarHorario {
 
         return null;
     }
+
+    public boolean Traslape() 
+    {
+        Horario horario = new Horario();
+        horario.setTraslape(true); 
+        return true;
+    }
+
+    public String VerDescripcion() 
+    {
+        Horario horario = new Horario();
+        return horario.getDescripcion(); 
+        
+    }
+
+
 }
+
+class getHoraTest{
+        private Horario validHora;
+        
+       public getHora(){
+       }
+       
+       @BeforeEach
+        public void setUp() {
+            validHora = new Horario();
+        }
+
+        @AfterEach
+        public void tearDown() {
+            validHora = null;
+        }
+
+        @Test
+        public void checkTest() {
+            assertEquals(4, validHora.getCodigoHorario());
+        }
+    }
+
+
+class setHoraTest{
+    private Horario validHora;
+    
+    @BeforeEach
+    public void setUp(){
+        //1 MOCKEAR LAS CLASES DE DEPENDENCIA
+        validHora = Mockito.mock(Horario.class);
+    }
+    
+    @Test
+    public void addTest(){
+        //EJECUTAR CODIGO DE LA CLASE A TESTEAR
+        Mockito.verify(validHora).getCodigoHorario(3);
+
+    }
+ }
+
+
+class setCarrera{
+    private Horario validHora;
+    
+    @BeforeEach
+    public void setUp(){
+        //1 MOCKEAR LAS CLASES DE DEPENDENCIA
+        validCarrera = Mockito.mock(Carrera.class);
+    }
+    
+    @Test
+    public void addTest(){
+        //EJECUTAR CODIGO DE LA CLASE A TESTEAR
+        Mockito.verify(validHora).getCodigo();
+
+    }
+ }
