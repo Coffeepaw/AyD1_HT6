@@ -95,6 +95,22 @@ public class AsignarHorario {
 
         return null;
     }
+
+    public boolean Traslape() 
+    {
+        Horario horario = new Horario();
+        horario.setTraslape(true); 
+        return true;
+    }
+
+    public String VerDescripcion() 
+    {
+        Horario horario = new Horario();
+        return horario.getDescripcion(); 
+        
+    }
+
+
 }
 
 class getHoraTest{
