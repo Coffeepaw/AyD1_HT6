@@ -10,6 +10,9 @@ public class Carrera {
         this.descripcion = descripcion;
     }
 
+    public Carrera() {
+  }
+
     public int getCodigo() {
         return codigo;
     }

@@ -9,6 +9,9 @@ public class RegistroAcademico {
         this.correlativo = correlativo;
     }
 
+    public RegistroAcademico() {
+  }
+
     public int getAnio() {
         return anio;
     }
